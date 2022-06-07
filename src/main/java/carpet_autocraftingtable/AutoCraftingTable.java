@@ -12,7 +12,8 @@ public class AutoCraftingTable implements CarpetExtension
 
     @Override
     public void onGameStarted() {
-        CraftingTableBlockEntity.init();
+        // This seems to lock up carpet
+        // CraftingTableBlockEntity.init();
         // let's /carpet handle our few simple settings
         CarpetServer.settingsManager.parseSettingsClass(AutoCraftingTableSettings.class);
     }
